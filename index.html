@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,wxc-user-scalable=no,initial-scale=1"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/sherd.js"></script>
+    <script type="text/javascript" src="js/downLoad.js"></script>
+    <script type="text/javascript" src="js/selectTouch.js"></script>
+    <script type="text/javascript" src="js/alert.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+</head>
+<body>
+
+
+
+<div class="gxs-vh">
+    <div class="gxs-header">
+        这是头部
+    </div>
+    <div class="gxs-body scrollable">
+        <div class="scrollable-box">
+            <h1 class="font">这是主体</h1>
+            <button type="button" class="gxs-btn dialog-btn">弹出层</button>
+            <br>
+            <button type="button" class="gxs-btn dialog-btn2">自定义内容弹出层</button>
+            <br>
+            <button type="button" class="gxs-btn alert-btn3">错误提示弹出层</button>
+            <br>
+            <button type="button" class="gxs-btn alert-selectTouch">选择</button>
+            <br>
+            <button type="button" class="gxs-btn alert-selectTouch1" data-index="modal">选择</button>
+            <br>
+            <button type="button" class="gxs-btn alert-selectTouch2" data-index="modal2">选择</button>
+            <br>
+            <select name="" class="gxs-select" data-index="modal">
+                <option>请选择</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select>
+            <select name="" class="gxs-select" data-index="modal2">
+                <option>请选择</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+            </select>
+        </div>
+
+        <div class="gxs-cells">
+            <div class="gxs-cell">
+                <div class="gxs-cell-hd">12</div>
+                <div class="gxs-cell-bd gxs-cell-default">12</div>
+                <div class="gxs-cell-ft">12</div>
+            </div>
+            <div class="gxs-cell">
+                <div class="gxs-cell-hd">12</div>
+                <div class="gxs-cell-bd gxs-cell-default">12</div>
+                <div class="gxs-cell-ft">12</div>
+            </div>
+            <div class="gxs-cell">
+                <div class="gxs-cell-hd">12</div>
+                <div class="gxs-cell-bd gxs-cell-input">
+                    <input type="text" class="gxs-input">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="gxs-footer">
+        这是页脚
+    </div>
+</div>
+
+
+<div class="gxs-dialogs">
+    <div class="gxs-dialog">
+        <div class="gxs-dialog-hd">
+            <h4 class="gxs-dialog-title">弹窗标题</h4>
+        </div>
+        <div class="gxs-dialog-bd">
+            <p>弹窗内容</p>
+        </div>
+        <div class="gxs-dialog-ft">
+            <button class="gxs-dialog-btn default">取消</button>
+            <button class="gxs-dialog-btn primary">确定</button>
+        </div>
+    </div>
+    <div class="gxs-dialog-mask"></div>
+</div>
+
+<div class="gxs-alerts">
+    <div class="gxs-alert">
+        <p>错误提示</p>
+    </div>
+</div>
+
+<div class="gxs-selectTouchs">
+    <div class="gxs-selectTouch">
+        <div class="gxs-selectTouch-hd">
+            <button class="gxs-btn default" type="button">取消</button>
+            <button class="gxs-btn primary" type="button">选择</button>
+        </div>
+        <div class="gxs-selectTouch-bd">
+            <div class="gxs-selectTouch-border"></div>
+            <div class="gxs-selectTouch-slide">
+                <div class="gxs-selectTouch-box">
+                    <p><span>北京</span></p>
+                </div>
+                <div class="gxs-selectTouch-box">
+                    <p><span>青岛</span></p>
+                </div>
+                <div class="gxs-selectTouch-box">
+                    <p><span>烟台</span></p>
+                </div>
+                <div class="gxs-selectTouch-box">
+                    <p><span>威海</span></p>
+                </div>
+                <div class="gxs-selectTouch-box">
+                    <p><span>潍坊</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gxs-selectTouch-bg"></div>
+</div>
+
+<script type="text/javascript">
+    $('.dialog-btn').touchClick(function (event) {
+        new dialog({
+            default: function () {
+                console.log("取消按钮1")
+            },
+            primary: function () {
+                console.log("确定按钮1")
+            }
+        })
+    })
+    $('.dialog-btn2').touchClick(function (event) {
+        new dialog({
+            append: true,
+            dialogText: '提示信息2',
+            dialogTitle: '提示标题2',
+            default: function () {
+                console.log("取消按钮2")
+            },
+            primary: function () {
+                console.log("确定按钮2")
+            }
+        })
+    })
+
+    $('.alert-btn3').touchClick(function () {
+        new alert({
+            append: true,
+            alertBtn: this,
+            alertText: '提示信息2',
+            default: function () {
+                console.log("触发提示框")
+            },
+            primary: function () {
+                console.log("提示框消失")
+            }
+        })
+    });
+
+    downLoad({});
+
+    $('.alert-selectTouch').touchClick(function () {
+        var slider = new selectTouch({
+            designateSelect: function (text, val) {
+                console.log(text, val)
+            }
+        });
+    });
+    $('.alert-selectTouch1').touchClick(function () {
+        var slider = new selectTouch({
+            append: true,
+            alertBtn: this,
+            designateSelect: function (text, val) {
+                console.log(text, val)
+            }
+        });
+    });
+    $('.alert-selectTouch2').touchClick(function () {
+        var slider2 = new selectTouch({
+            append: true,
+            alertBtn: this,
+            designateSelect: function (text, val) {
+                console.log(text, val)
+            }
+        });
+    });
+
+</script>
+</body>
+
+</html>
