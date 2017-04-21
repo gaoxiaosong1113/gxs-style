@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,wxc-user-scalable=no,initial-scale=1"/>
+    <meta name="viewport"
+          content="width=device-width,minimum-scale=1,maximum-scale=1,wxc-user-scalable=no,initial-scale=1"/>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="js/sherd.js"></script>
@@ -16,68 +17,215 @@
 <body>
 
 
-
 <div class="gxs-vh">
-    <div class="gxs-header">
-        这是头部
+    <div class="header">
+        <div class="header-icon"></div>
+        <div class="header-title">gxs-style</div>
+        <div class="header-icon"></div>
     </div>
-    <div class="gxs-body scrollable">
-        <div class="scrollable-box">
-            <h1 class="font">这是主体</h1>
-            <button type="button" class="gxs-btn dialog-btn">弹出层</button>
-            <br>
-            <button type="button" class="gxs-btn dialog-btn2">自定义内容弹出层</button>
-            <br>
-            <button type="button" class="gxs-btn alert-btn3">错误提示弹出层</button>
-            <br>
-            <button type="button" class="gxs-btn alert-selectTouch">选择</button>
-            <br>
-            <button type="button" class="gxs-btn alert-selectTouch1" data-index="modal">选择</button>
-            <br>
-            <button type="button" class="gxs-btn alert-selectTouch2" data-index="modal2">选择</button>
-            <br>
-            <select name="" class="gxs-select" data-index="modal">
-                <option>请选择</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-            </select>
-            <select name="" class="gxs-select" data-index="modal2">
-                <option>请选择</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-                <option>13</option>
-            </select>
-        </div>
-
-        <div class="gxs-cells">
-            <div class="gxs-cell">
-                <div class="gxs-cell-hd">12</div>
-                <div class="gxs-cell-bd gxs-cell-default">12</div>
-                <div class="gxs-cell-ft">12</div>
+    <div class="content">
+        <div class="article">
+            <div class="article-title">
+                <h3>flex布局</h3>
+                <p>栅格布局</p>
             </div>
-            <div class="gxs-cell">
-                <div class="gxs-cell-hd">12</div>
-                <div class="gxs-cell-bd gxs-cell-default">12</div>
-                <div class="gxs-cell-ft">12</div>
-            </div>
-            <div class="gxs-cell">
-                <div class="gxs-cell-hd">12</div>
-                <div class="gxs-cell-bd gxs-cell-input">
-                    <input type="text" class="gxs-input">
+            <div class="article-content">
+                <div class="flex flex-show">
+                    <div class="flex-1">1</div>
+                    <div class="flex-2">2</div>
+                    <div class="flex-3">3</div>
+                    <div class="flex-4">4</div>
+                </div>
+                <div class="flex flex-show">
+                    <div class="flex-10">10</div>
+                    <div class="flex-2">2</div>
+                    <div class="flex-3">3</div>
+                    <div class="flex-4">4</div>
                 </div>
             </div>
         </div>
+        <div class="article">
+            <div class="article-title">
+                <h3>按钮样式组button</h3>
+                <p>实体按钮</p>
+            </div>
+            <div class="article-content">
+                <button type="button" class="gxs-btn gxs-btn-default">默认</button>
+                <button type="button" class="gxs-btn gxs-btn-danger">危险</button>
+                <button type="button" class="gxs-btn gxs-btn-success">成功</button>
+                <button type="button" class="gxs-btn gxs-btn-info">一般信息</button>
+                <button type="button" class="gxs-btn gxs-btn-hint">提示</button>
+                <button type="button" class="gxs-btn gxs-btn-warning">警告</button>
+                <button type="button" class="gxs-btn gxs-btn-primary">首选项</button>
+            </div>
+        </div>
+        <div class="article">
+            <div class="article-title">
+                <h3>按钮样式组button</h3>
+                <p>边框按钮按钮</p>
+            </div>
+            <div class="article-content">
+                <button type="button" class="gxs-btn gxs-btn-default-style">默认</button>
+                <button type="button" class="gxs-btn gxs-btn-danger-style">危险</button>
+                <button type="button" class="gxs-btn gxs-btn-success-style">成功</button>
+                <button type="button" class="gxs-btn gxs-btn-info-style">一般信息</button>
+                <button type="button" class="gxs-btn gxs-btn-hint-style">提示</button>
+                <button type="button" class="gxs-btn gxs-btn-warning-style">警告</button>
+                <button type="button" class="gxs-btn gxs-btn-primary-style">首选项</button>
+            </div>
+        </div>
+        <div class="article">
+            <div class="article-title">
+                <h3>弹出层</h3>
+                <p>支持自定义内容弹出提示框</p>
+            </div>
+            <div class="article-content">
+                <button type="button" class="gxs-btn gxs-btn-hint dialog-btn">弹出层</button>
+                <button type="button" class="gxs-btn gxs-btn-hint dialog-btn2">自定义内容弹出层</button>
+            </div>
+        </div>
+        <div class="article">
+            <div class="article-title">
+                <h3>错误提示弹出层</h3>
+                <p>支持自定义内容</p>
+            </div>
+            <div class="article-content">
+                <button type="button" class="gxs-btn gxs-btn-hint alert-btn3">错误提示弹出层</button>
+            </div>
+        </div>
 
-    </div>
-    <div class="gxs-footer">
-        这是页脚
+        <div class="article">
+            <div class="article-title">
+                <h3>模拟ios select</h3>
+                <p>支持select 生成选择下拉</p>
+            </div>
+            <div class="article-content">
+                <button type="button" class="gxs-btn gxs-btn-hint alert-selectTouch">选择</button>
+                <br>
+                <button type="button" class="gxs-btn gxs-btn-hint alert-selectTouch1" data-index="modal">选择</button>
+                <select name="" class="gxs-btn gxs-btn-default gxs-select" data-index="modal">
+                    <option>请选择</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="article">
+            <div class="article-title">
+                <h3>cell</h3>
+                <p>列表展示，icon/input</p>
+            </div>
+            <div class="article-content">
+                <div class="gxs-cells-title">
+                    带说明的列表
+                </div>
+                <div class="gxs-cells">
+                    <div class="gxs-cell">
+                        <div class="gxs-cell-bd gxs-cell-default">标题文字</div>
+                        <div class="gxs-cell-ft">说明文字</div>
+                    </div>
+                    <div class="gxs-cell">
+                        <div class="gxs-cell-bd gxs-cell-default">标题文字</div>
+                        <div class="gxs-cell-ft">说明文字</div>
+                    </div>
+                </div>
+                <div class="gxs-cells-title">
+                    带跳转的列表
+                </div>
+                <div class="gxs-cells gxs-cells-arrow">
+                    <a href="#" class="gxs-cell">
+                        <div class="gxs-cell-bd gxs-cell-default">标题文字</div>
+                        <div class="gxs-cell-ft">说明文字</div>
+                    </a>
+                    <a href="#" class="gxs-cell">
+                        <div class="gxs-cell-bd gxs-cell-default">标题文字</div>
+                        <div class="gxs-cell-ft">说明文字</div>
+                    </a>
+                </div>
+                <div class="gxs-cells-title">
+                    带开关的列表
+                </div>
+                <div class="gxs-cells gxs-cells-switch">
+                    <div class="gxs-cell">
+                        <div class="gxs-cell-bd gxs-cell-default">标题文字</div>
+                        <div class="gxs-cell-ft">
+                            <input type="checkbox" class="gxs-switch">
+                        </div>
+                    </div>
+                    <div class="gxs-cell">
+                        <div class="gxs-cell-bd gxs-cell-default">标题文字</div>
+                        <div class="gxs-cell-ft">
+                            <input type="checkbox" class="gxs-switch">
+                        </div>
+                    </div>
+                </div>
+                <div class="gxs-cells-title">
+                    带icon的列表
+                </div>
+                <div class="gxs-cells gxs-cells-icon">
+                    <div class="gxs-cell">
+                        <div class="gxs-cell-hd">
+                            <i class="gxs-icon">
+                                <img src="images/icon.png" alt="">
+                            </i>
+                        </div>
+                        <div class="gxs-cell-bd gxs-cell-default">标题文字</div>
+                        <div class="gxs-cell-ft">说明文字</div>
+                    </div>
+                    <div class="gxs-cell">
+                        <div class="gxs-cell-hd">
+                            <i class="gxs-icon">
+                                <img src="images/icon.png" alt="">
+                            </i>
+                        </div>
+                        <div class="gxs-cell-bd gxs-cell-default">标题文字</div>
+                        <div class="gxs-cell-ft">说明文字</div>
+                    </div>
+                </div>
+                <div class="gxs-cells-title">
+                    带icon的输入框列表
+                </div>
+                <div class="gxs-cells gxs-cells-icon gxs-cells-input">
+                    <div class="gxs-cell">
+                        <div class="gxs-cell-hd">
+                            <i class="gxs-icon">
+                                <img src="images/icon.png" alt="">
+                            </i>
+                        </div>
+                        <div class="gxs-cell-bd gxs-cell-default">
+                            <input type="text" class="gxs-input" placeholder="请输入标题文字">
+                        </div>
+                    </div>
+                    <div class="gxs-cell gxs-cell-yzm">
+                        <div class="gxs-cell-hd">
+                            <i class="gxs-icon">
+                                <img src="images/icon.png" alt="">
+                            </i>
+                        </div>
+                        <div class="gxs-cell-bd gxs-cell-default">
+                            <input type="text" class="gxs-input" placeholder="请输入标题文字">
+                        </div>
+                        <div class="gxs-cell-ft gxs-cell-yzmBtn">
+                            <button type="button" class="gxs-btn gxs-btn-hint">获取验证码</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="gxs-agreement">
+                    <label class="gxs-agreement-content" for="agreement">
+                        <div class="gxs-check-warp">
+                            <input type="checkbox" id="agreement" class="gxs-check">
+                            <i class="gxs-icon"></i>
+                        </div>
+                        同意注册协议
+                    </label>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -133,7 +281,36 @@
     </div>
     <div class="gxs-selectTouch-bg"></div>
 </div>
-
+<div class="home-nav">
+    <div class="fixed">
+        <div class="flex">
+            <div class="flex-1">
+                <div class="gxs-icon">
+                    <img src="images/icon_tabbar.png" alt="">
+                </div>
+                <p>首页</p>
+            </div>
+            <div class="flex-1">
+                <div class="gxs-icon">
+                    <img src="images/icon_tabbar.png" alt="">
+                </div>
+                <p>首页</p>
+            </div>
+            <div class="flex-1">
+                <div class="gxs-icon">
+                    <img src="images/icon_tabbar.png" alt="">
+                </div>
+                <p>首页</p>
+            </div>
+            <div class="flex-1">
+                <div class="gxs-icon">
+                    <img src="images/icon_tabbar.png" alt="">
+                </div>
+                <p>首页</p>
+            </div>
+        </div>
+    </div>
+</div>
 <script type="text/javascript">
     $('.dialog-btn').touchClick(function (event) {
         new dialog({

@@ -1,32 +1,26 @@
 @charset "utf-8";
 
-@media (min-width: 376px) and (max-width: 99999px) {
-  html, body {
-    font-size: 80.86%;
-  }
-}
-
-@media (min-width: 321px) and (max-width: 375px) {
-  html, body {
-    font-size: 73.243%;
-  }
-}
-
-@media (min-width: 0) and (max-width: 320px) {
+@media (min-width: 321px) and (max-width: 99999px) {
   html, body {
     font-size: 62.5%;
   }
 }
 
+@media (min-width: 0) and (max-width: 320px) {
+  html, body {
+    font-size: 54.5%;
+  }
+}
+
 //字体样式与颜色
 //（默认样式）Default
-@default: #61676F;
+@default: #2e2e2e;
 @text-default: @default; //（首选项）Primary
-@primary: #373844;
+@primary: #3F3F3F;
 @textPrimary: @primary; //（一般信息）Info
 @info: #5D5D66;
 @textInfo: @info; //（一般信息）Info
-@link: #1C5699;
+@link: #5076fb;
 @textLink: @link; //（警告）Warning
 @warning: #E9001D;
 @textWarning: @warning; //（危险）Danger
@@ -36,8 +30,11 @@
 @textSuccess: @success;
 @successDisabledBackground: #6AE496;
 @successDisabledColor: #6AE496; //（提示）hint
-@hint: #FE7A5C;
+@hint: @link;
 @textHint: @hint; //字体
+
+@headerBackground: @link;
+
 @lineHeightDefault: 1.5em;
 @linePrimary: 1em;
 @fontSizeH1: 2.2rem;
@@ -53,41 +50,100 @@
 @promptColor: #C9CDD1;
 @lineSpacingColor: #E4E6E8;
 @minVhBackground: #f9fafc; // button
-@buttonFontSize: 1.2rem;
-@buttonHeight: 1.2rem;
-@buttonBorderRadius: 1.2rem; // input
-@inputPlaceholderColor: #ccc;
+
+@inputPlaceholderColor: #c1c0c6;
 @inputFontSize: 1.2rem;
 @inputColor: #ccc;
 @inputBackground: #fff;
 @inputBorderColor: #ccc;
 @inputBorderRadius: .5rem; //居中样式
 
-.text-align(@align) {
-  text-align: @align;
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
 }
 
 //主轴的方向
 
-.flex-direction(@type) {
-  -ms-flex-direction: @type;
-  -webkit-flex-direction: @type;
-  flex-direction: @type;
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.flex-direction-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-direction-inherit {
+  flex-direction: inherit;
+}
+
+.flex-direction-row-reverse {
+  flex-direction: row-reverse;
 }
 
 //一条轴线排不下，如何换行
 
-.flex-wrap(@type) {
-  -ms-flex-wrap: @type;
-  -webkit-flex-wrap: @type;
-  flex-wrap: @type;
+.flex-wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap-inherit {
+  flex-wrap: inherit;
+}
+
+.flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-wrap-reverse {
+  flex-wrap: wrap-reverse;
 }
 
 //多根轴线的对齐方式
+.align-content-inherit {
+  align-content: inherit;
 
-.align-content(@type) {
-  -webkit-align-content: @type;
-  align-content: @type;
+}
+
+.align-content-flex-end {
+  align-content: flex-end;
+
+}
+
+.align-content-flex-start {
+  align-content: flex-start;
+
+}
+
+.align-content-center {
+  align-content: center;
+
+}
+
+.align-content-space-around {
+  align-content: space-around;
+
+}
+
+.align-content-space-around {
+  align-content: space-around;
+
+}
+
+.align-content-stretch {
+  align-content: stretch;
+
 }
 
 //分配多余空间之前，项目占据的主轴空间
@@ -95,6 +151,14 @@
 .flex-basis(@type) {
   -webkit-flex-basis: @type;
   flex-basis: @type;
+}
+
+.flex-basis-auto {
+  flex-basis: auto;
+}
+
+.flex-basis-inherit {
+  flex-basis: inherit;
 }
 
 //flex-shrink 和 flex-basis的简写
@@ -107,23 +171,103 @@
 
 //允许单个项目有与其他项目不一样的对齐方式
 
-.align-self(@type) {
-  -webkit-align-self: @type;
-  align-self: @type;
+.align-self-inherit {
+  align-self: inherit;
+
+}
+
+.align-self-auto {
+  align-self: auto;
+
+}
+
+.align-self-center {
+  align-self: center;
+
+}
+
+.align-self-baseline {
+  align-self: baseline;
+
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+
+}
+
+.align-self-stretch {
+  align-self: stretch;
+
 }
 
 //x轴对齐方式
 
-.align-items(@type) {
-  -webkit-align-items: @type;
-  align-items: @type;
+.align-items-flex-start {
+  align-items: flex-start;
+
+}
+
+.align-items-flex-end {
+  align-items: flex-end;
+
+}
+
+.align-items-baseline {
+  align-items: baseline;
+
+}
+
+.align-items-center {
+  align-items: center;
+
+}
+
+.align-items-inherit {
+  align-items: inherit;
+
+}
+
+.align-items-stretch {
+  align-items: stretch;
+
 }
 
 //x轴分布
 
-.justify-content(@type) {
-  -webkit-justify-content: @type;
-  justify-content: @type;
+.justify-content-inherit {
+  justify-content: inherit;
+
+}
+
+.justify-content-center {
+  justify-content: center;
+
+}
+
+.justify-content-flex-start {
+  justify-content: flex-start;
+
+}
+
+.justify-content-flex-end {
+  justify-content: flex-end;
+
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+
 }
 
 //2d旋转
@@ -258,16 +402,17 @@ html {
 
 body {
   min-height: 100vh;
-  .flex-direction(column);
+  .flex-direction-column;
   .font-family;
   .display-flex;
   .box-sizing;
   width: 100%;
+  background: #fff;
 }
 
 /*灰色背景*/
 .vague-body {
-  background: #F8F8F8;
+  background: #f5f5f5;
 }
 
 /*白色背景*/
@@ -280,7 +425,7 @@ body {
   .flex(1);
   padding-bottom: 2rem;
   background: @minVhBackground;
-  .flex-direction(column);
+  .flex-direction-column;
   .display-flex;
 }
 
@@ -384,6 +529,7 @@ h3,
 h4,
 h5,
 h6 {
+  margin-top: 10px;
   .font-family;
   font-weight: 400;
 }
@@ -391,31 +537,40 @@ h6 {
 .h1,
 h1 {
   font-size: @fontSizeH1;
+  margin-bottom: 20px;
 }
 
 .h2,
 h2 {
   font-size: @fontSizeH2;
+  margin-bottom: 20px;
+
 }
 
 .h3,
 h3 {
   font-size: @fontSizeH3;
+  margin-bottom: 15px;
 }
 
 .h4,
 h4 {
   font-size: @fontSizeH4;
+  margin-bottom: 10px;
 }
 
 .h5,
 h5 {
   font-size: @fontSizeH5;
+  margin-bottom: 10px;
+
 }
 
 .h6,
 h6 {
   font-size: @fontSizeH6;
+  margin-bottom: 10px;
+
 }
 
 /*字体 End*/
@@ -441,15 +596,15 @@ h6 {
 }
 
 .gxs-text-center {
-  .text-align(center) !important;
+  .text-align-center !important;
 }
 
 .gxs-text-left {
-  .text-align(left) !important;
+  .text-align-left !important;
 }
 
 .gxs-text-right {
-  .text-align(right);
+  .text-align-right !important;
 }
 
 /* form gxs-btn input Star*/
@@ -498,6 +653,10 @@ option {
   width: 100%;
 }
 
+@buttonFontSize: 1.2rem;
+@buttonHeight: 44px;
+@buttonBorderRadius: 4px; // input
+
 .gxs-btn {
   position: relative;
   .box-sizing(border-box);
@@ -505,11 +664,11 @@ option {
   text-align: center;
   text-decoration: none;
   color: @default;
-  line-height: @buttonHeight;
   .border-radius(@buttonBorderRadius);
   overflow: hidden;
   .font-family;
-
+  padding: 8px 12px;
+  border: 1px solid transparent;
   &.gxs-btn-inline {
     display: inline-block;
   }
@@ -532,13 +691,23 @@ option {
   color: @default;
 }
 
+.gxs-btn-default-style {
+  background: transparent;
+  border: 1px solid #F2F3F4;
+  color: @default;
+}
+
 /*（首选项）Primary*/
 .gxs-btn-primary {
-  color: @primary;
+  color: #fff;
+  border: 1px solid @primary;
   background: @primary;
 }
 
 .gxs-btn-primary-style {
+  color: @primary;
+  border: 1px solid @primary;
+  background: transparent;
 }
 
 /*（成功）Success*/
@@ -557,19 +726,23 @@ option {
   border: 1px solid @successDisabledBackground;
 }
 
-/*（一般信息）Info*/
-.gxs-btn-info-style {
+.gxs-btn-success-style {
+  color: @success;
+  border: 1px solid @success;
+  background: transparent;
 }
 
+/*（一般信息）Info*/
+
 .gxs-btn-info {
-  color: @info;
+  color: #fff;
   background: @info;
   border: 1px solid @info;
 }
 
 .gxs-btn-info-style {
   color: @info;
-  background: #fff;
+  background: transparent;
   border: 1px solid @info;
 }
 
@@ -580,10 +753,22 @@ option {
   border: 1px solid @warning;
 }
 
+.gxs-btn-warning-style {
+  color: @warning;
+  background: transparent;
+  border: 1px solid @warning;
+}
+
 /*（危险）Danger*/
 .gxs-btn-danger {
   color: #fff;
   background: @danger;
+  border: 1px solid @danger;
+}
+
+.gxs-btn-danger-style {
+  color: @danger;
+  background: transparent;
   border: 1px solid @danger;
 }
 
@@ -596,7 +781,7 @@ option {
 
 .gxs-btn-hint-style {
   color: @hint;
-  background: #fff;
+  background: transparent;
   border: 1px solid @hint;
 }
 
@@ -612,18 +797,26 @@ fieldset[disabled] .gxs-btn {
   color: @inputPlaceholderColor;
 }
 
+input::-webkit-input-placeholder {
+  .placeholderColor;
+}
+
+input:-moz-placeholder {
+  .placeholderColor;
+}
+
+input::-moz-placeholder {
+  .placeholderColor;
+}
+
+input:-ms-input-placeholder {
+  .placeholderColor;
+}
+
 input {
   font-size: @inputFontSize;
   color: @inputColor;
   .font-family;
-}
-
-input:-moz-placeholder,
-input:-ms-input-placeholder,
-input::-moz-placeholder,
-input::-webkit-input-placeholder {
-  /* Internet Explorer 10+ */
-  .placeholderColor;
 }
 
 .gxs-form-group {
@@ -653,40 +846,40 @@ input::-webkit-input-placeholder {
 
 .gxs-check {
   display: none;
-
   & + .gxs-icon {
-    background-color: inherit;
-    border: 1px solid #C1CACA;
     .border-radius(50%);
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 16px;
+    height: 16px;
     display: inline-block;
     position: relative;
     overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* Oval: */
+    background: #fff;
+    border: 1px solid @success;
   }
 
   &:checked + .gxs-icon {
-    background-color: @default;
-    border: 1px solid #00B642;
-    color: @success;
-  }
-
-  &:checked + .gxs-icon:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    text-align: center;
     background: @success;
-    background-size: 100% 100%;
-
+    border: 2px solid @success;
+    /* Oval Copy 2: */
+    &:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      background: @success;
+      .border-radius(50%);
+    }
   }
 }
 
 .gxs-select {
-  font-size: 2.4rem;
+  font-size: 12px;
 }
 
 label {
@@ -737,7 +930,7 @@ textarea {
 /*（提示）hint*/
 .gxs-text-title {
   color: @titleColor !important;
-  font-size: 28px;
+  font-size: 2.8rem;
 }
 
 .filter(@num) {
@@ -800,7 +993,7 @@ textarea {
 
   .gxs-dialog {
     .display-flex;
-    .flex-direction(column);
+    .flex-direction-column;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -835,7 +1028,7 @@ textarea {
     .gxs-dialog-ft {
       border-top: 1px solid #ccc;
       .display-flex;
-      .flex-direction(row);
+      .flex-direction-row;
 
       .gxs-dialog-btn {
         border: 0;
@@ -939,8 +1132,8 @@ textarea {
     right: 0;
     z-index: 99;
     .display-flex;
-    .justify-content(center);
-    .align-items(center);
+    .justify-content-center;
+    .align-items-center;
     .loader {
       .transform-scale(.3);
       width: 2rem;
@@ -1084,8 +1277,8 @@ textarea {
     width: 100%;
     position: relative;
     .display-flex;
-    .justify-content(space-between);
-    .align-items(center);
+    .justify-content-space-between;
+    .align-items-center;
     padding: 0 1.5rem;
     height: 4.4rem;
 
@@ -1182,8 +1375,8 @@ textarea {
   .gxs-selectTouch-hd {
     width: 100%;
     .display-flex;
-    .justify-content(space-between);
-    .align-items(center);
+    .justify-content-space-between;
+    .align-items-center;
     padding: 0 1.5rem;
 
     .gxs-btn {
@@ -1224,7 +1417,7 @@ textarea {
 @cellHeaderLineHeight: 1.5em;
 @cellHeaderAlign: left;
 
-@cellTitlePadding: 12px 12px 0;
+@cellTitlePadding: 0 12px 0;
 @cellTitleFont: 12px;
 @cellTitleColor: #999999;
 @cellTitleLineHeight: 1em;
@@ -1269,6 +1462,11 @@ textarea {
   border-bottom: @cellBorder solid @cellBorderColor;
   a {
     color: inherit;
+  }
+  .gxs-cell:last-child {
+    &:after {
+      display: none;
+    }
   }
   &.gxs-cells-switch {
     .gxs-cell {
@@ -1406,7 +1604,7 @@ textarea {
   background: @cellBackground;
   height: @cellHeight;
   padding: @cellPadding;
-  .align-items(center);
+  .align-items-center;
   .display-flex;
   .gxs-cell-hd {
     padding: @cellHeaderPadding;
@@ -1441,19 +1639,14 @@ textarea {
     }
   }
   &.gxs-cell-yzm {
-    padding: 0 0 0 15px;
     .gxs-icon-close {
       margin-right: 1.5rem;
     }
     .gxs-cell-yzmBtn {
       font-size: 0;
-      border: 0;
-      background: none;
-      text-align: center;
-      padding-left: 0;
-      padding-right: 0;
-      img {
-        height: 40px;
+      .gxs-btn {
+        margin-top: -6px;
+        margin-bottom: -7px;
       }
     }
   }
@@ -1533,15 +1726,191 @@ textarea {
 }
 
 .gxs-agreement {
-  padding: 4rem 3rem 3rem;
-  font-size: 2.4rem;
+  padding: 10px 15px;
+  font-size: 12px;
   color: #999999;
   .gxs-agreement-content {
     .display-flex;
-    .justify-content(center);
-    .align-items(center);
+    .justify-content-flex-start;
+    .align-items-center;
+    font-size: 12px;
   }
   .gxs-check-warp {
-    margin-right: 2rem;
+    margin-right: 5px;
+    font-size: 0;
+  }
+}
+
+.flex {
+  .display-flex;
+  .justify-content-flex-start;
+  &.flex-show {
+    margin-bottom: 10px;
+    border-right: 1px solid #ccc;
+    [class^=flex] {
+      background: #F2F3F4;
+      text-align: center;
+      padding: 5px;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+    }
+  }
+  .flex-1 {
+    .flex(1);
+  }
+  .flex-2 {
+    .flex(2);
+  }
+  .flex-3 {
+    .flex(3);
+  }
+  .flex-4 {
+    .flex(4);
+  }
+  .flex-5 {
+    .flex(5);
+  }
+  .flex-6 {
+    .flex(6);
+  }
+  .flex-7 {
+    .flex(7);
+  }
+  .flex-8 {
+    .flex(8);
+  }
+  .flex-9 {
+    .flex(9);
+  }
+  .flex-10 {
+    .flex(10);
+  }
+  .flex-11 {
+    .flex(11);
+  }
+  .flex-12 {
+    .flex(12);
+  }
+}
+
+.home-nav {
+  height: 50px;
+  .fixed {
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #e7e7e7;
+  }
+  [class^=flex-] {
+    height: 50px;
+    .display-flex;
+    .flex-direction-column;
+    .justify-content-center;
+    .align-items-center;
+    .gxs-icon {
+      overflow: hidden;
+      position: relative;
+      width: 27px;
+      height: 27px;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    p {
+      margin-top: 5px;
+      font-size: 10px;
+      line-height: 1em;
+    }
+  }
+}
+
+.header {
+  padding: 0 14px;
+  background: @headerBackground;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  .header-icon {
+    width: 6rem;
+    height: 20px;
+    display: flex;
+    align-content: center;
+    .icon {
+      display: block;
+      img {
+        height: 20px;
+        width: auto;
+      }
+    }
+    span {
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+  .header-btn {
+    button {
+      padding-left: 0;
+      margin-right: -10px;
+      font-size: 1.6rem;
+      color: #FFCC35;
+      background: none;
+      border: 0;
+    }
+  }
+  .header-title {
+    font-size: 14px;
+    color: #FFFFFF;
+    & + .header-icon {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.content {
+  .content-box {
+    padding: 0 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.article {
+  .article-title {
+    padding: 5px 15px;
+    h3 {
+      font-size: 22px;
+      color: #333333;
+      line-height: 1.2em;
+      margin-bottom: 6px;
+    }
+    p {
+      font-size: 12px;
+      color: #999999;
+      line-height: 1.5em;
+    }
+  }
+  .article-content {
+    font-size: 14px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e7e7e7;
+    button {
+      margin-bottom: 5px;
+    }
+
+    .gxs-cells, .gxs-cells-title, .gxs-agreement {
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+
+  }
+  .article-footer {
+
   }
 }

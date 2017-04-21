@@ -50,8 +50,8 @@ $(function () {
             $(this).siblings(".gxs-input").val('');
             $(this).fadeOut(100);
         }
-    }).append();
-    $(".gxs-cells-input").append(html);
+    });
+    $(".gxs-cells-input").find(".gxs-input").after(html);
     $("input.gxs-input").on("keyup", function () {
         var _this = $(this);
         var ele = $(this).siblings(".gxs-icon-close");

@@ -69,4 +69,5 @@
         alertOptions.default();
     };
     window.alert = alert; //暴露给外部,以供调用
+    
 })($);
